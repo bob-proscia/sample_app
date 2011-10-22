@@ -1,8 +1,5 @@
 source 'http://rubygems.org'
 
-# Was suggested to explicitly define which bundle was used: engine yard
-gem 'bundler', '1.0.21'
-
 gem 'rails', '3.1.0'
 
 gem 'gravatar_image_tag', '1.0.0.pre2'
