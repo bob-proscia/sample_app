@@ -16,5 +16,9 @@ class PagesController < ApplicationController
       @title = "Help"
   end
 
+  def canvas
+
+  end
+
 end
 
