@@ -1,13 +1,18 @@
 SampleApp::Application.routes.draw do
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  match '/signup',  :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
 
   root :to => 'pages#home'
 
-  match '/signup',  :to => 'users#new'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
 
+# FB Test Stuff I added in:
   match '/canvas',  :to => 'pages#canvas'
 
 # Remove previously defined routes 3.17:
